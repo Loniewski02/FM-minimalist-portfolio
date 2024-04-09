@@ -1,7 +1,13 @@
+import About from "./home/components/About";
+import Contact from "./home/components/Contact";
+import Header from "./home/components/Header";
+
 export default function Home() {
   return (
     <main>
-      <h1>hello world- main page</h1>
+      <Header />
+      <About />
+      <Contact />
     </main>
   );
 }
