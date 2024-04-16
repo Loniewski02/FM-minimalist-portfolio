@@ -73,7 +73,7 @@ const Navigation = () => {
                                 href={route.url}
                                 aria-label={`${route.name} Page`}
                                 onClick={hideMobileMenuHandler}
-                                className={`${pathname === route.url && "active"} link text-White text-xs uppercase tracking-wider md:text-GraylishDarkBlue`}
+                                className={`${pathname.includes(route.url) && "active"} link text-xs uppercase tracking-wider text-White md:text-GraylishDarkBlue`}
                             >
                                 {route.name}
                             </Link>

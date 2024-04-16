@@ -28,7 +28,7 @@ const Footer = () => {
                             href={route.url}
                             aria-label={route.name + " page"}
                             key={route.id}
-                            className={`${pathname === route.url && "active"} text-White link text-xs uppercase tracking-[2px]`}
+                            className={`${pathname.includes(route.url) && "active"} link text-xs uppercase tracking-[2px] text-White`}
                         >
                             {route.name}
                         </Link>

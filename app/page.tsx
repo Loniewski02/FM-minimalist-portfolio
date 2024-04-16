@@ -1,13 +1,12 @@
-import About from "./home/components/About";
-import Header from "./home/components/Header";
-import ContactSection from "./components/layout/ContactSection";
+"use client";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
-export default function Home() {
-  return (
-    <main>
-      <Header />
-      <About />
-      <ContactSection />
-    </main>
-  );
-}
+const Page = () => {
+    const router = useRouter();
+    useEffect(() => {
+        router.push("/home");
+    }, []);
+};
+
+export default Page;

@@ -23,6 +23,7 @@ const config: Config = {
             },
             fontSize: {
                 13: ["13px", "30px"],
+                15: ["15px", "30px"],
                 40: ["40px", "42px"],
                 50: ["50px", "50px"],
             },
