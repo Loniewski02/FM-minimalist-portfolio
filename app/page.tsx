@@ -1,13 +1,13 @@
 import About from "./home/components/About";
-import Contact from "./home/components/Contact";
 import Header from "./home/components/Header";
+import ContactSection from "./components/layout/ContactSection";
 
 export default function Home() {
   return (
     <main>
       <Header />
       <About />
-      <Contact />
+      <ContactSection />
     </main>
   );
 }

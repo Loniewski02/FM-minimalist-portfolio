@@ -3,31 +3,67 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-    -webkit-scroll-behavior: smooth;
-  }
+    html {
+        scroll-behavior: smooth;
+        -webkit-scroll-behavior: smooth;
+    }
 
-  body {
-    @apply bg-VeryLightGrey;
-  }
+    body {
+        @apply bg-VeryLightGrey;
+    }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply font-ibarra font-bold;
-  }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-ibarra font-bold;
+    }
+}
+
+@layer components {
+    .link {
+        @apply relative py-1 md:px-[1px];
+    }
+
+    .link::after {
+        content: "";
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.3s;
+
+        @apply absolute bottom-0 left-0 h-[2px]  w-full bg-Cyan;
+    }
+
+    .link:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+
+    .active::after {
+        transform: scaleX(1);
+    }
+
+    .active {
+        @apply font-bold;
+    }
+
+    .lines {
+        @apply border-b border-t border-LightGrey py-8;
+    }
 }
 
 @layer utilities {
-  .sectionX {
-    @apply px-8 md:px-10;
-  }
+    .sectionX {
+        @apply px-8 md:px-10;
+    }
 
-  .sectionY {
-    @apply py-12 lg:py-[75px];
-  }
+    .sectionY {
+        @apply py-12 lg:py-[75px];
+    }
+
+    .sectionLastB {
+        @apply pb-20 md:pb-24 lg:pb-28;
+    }
 }

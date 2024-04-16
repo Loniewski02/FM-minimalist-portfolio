@@ -29,10 +29,10 @@ const Header = () => {
             onClick={redirectHandler}
             className="group flex w-max items-center bg-DarkBlue transition-colors hover:bg-Cyan"
           >
-            <span className="block bg-[#0000001f] px-4 py-4 text-Cyan group-hover:text-white">
+            <span className="block bg-[#0000001f] px-4 py-4 text-Cyan group-hover:text-White">
               <Arrows />
             </span>
-            <span className="px-8 text-xs uppercase text-white">about me</span>
+            <span className="px-8 text-xs uppercase text-White">about me</span>
           </button>
         </div>
       </Wrapper>
