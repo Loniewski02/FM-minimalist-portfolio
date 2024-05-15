@@ -1,6 +1,6 @@
-import GithubIco from "@/public/assets/images/icons/github.svg";
-import TwitterIco from "@/public/assets/images/icons/twitter.svg";
-import LinkedinIco from "@/public/assets/images/icons/linkedin.svg";
+import Github from "@/public/assets/images/icons/github.svg";
+import Twitter from "@/public/assets/images/icons/twitter.svg";
+import Linkedin from "@/public/assets/images/icons/linkedin.svg";
 
 type Props = {
     isDark: boolean;
@@ -19,7 +19,7 @@ const Socials: React.FC<Props> = ({ isDark }) => {
                 aria-label="GitHub"
                 className={linkClasses}
             >
-                <GithubIco className={icoClasses} />
+                <Github className={icoClasses} />
             </a>
             <a
                 href="https://twitter.com/Loniewski02"
@@ -28,7 +28,7 @@ const Socials: React.FC<Props> = ({ isDark }) => {
                 aria-label="Twitter / X"
                 className={linkClasses}
             >
-                <TwitterIco className={icoClasses} />
+                <Twitter className={icoClasses} />
             </a>
             <a
                 href="https://www.linkedin.com/in/mi%C5%82osz-jan-%C5%82oniewski-49803b227/"
@@ -37,7 +37,7 @@ const Socials: React.FC<Props> = ({ isDark }) => {
                 aria-label="LinkedIn"
                 className={linkClasses}
             >
-                <LinkedinIco className={icoClasses} />
+                <Linkedin className={icoClasses} />
             </a>
         </div>
     );

@@ -27,6 +27,7 @@ const FormBox: React.FC<Props> = ({
     isError,
     errorMsg,
 }) => {
+    
     return (
         <div className="flex flex-col gap-2">
             <label

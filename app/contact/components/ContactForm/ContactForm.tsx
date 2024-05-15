@@ -1,5 +1,5 @@
 "use client";
-import useInput from "@/hooks/use-input";
+import useInput from "@/app/hooks/use-input";
 
 import Wrapper from "@/app/components/layout/Wrapper";
 import FormBox from "./FormBox";

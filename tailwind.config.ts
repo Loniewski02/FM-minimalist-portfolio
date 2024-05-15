@@ -24,10 +24,21 @@ const config: Config = {
             fontSize: {
                 13: ["13px", "30px"],
                 15: ["15px", "30px"],
+                32: ["32px", "42px"],
                 40: ["40px", "42px"],
                 50: ["50px", "50px"],
             },
             keyframes: {
+                loading: {
+                    "0%": { left: "0" },
+                    "30%": { width: "20%" },
+                    "65%": { width: "25%" },
+                    "90%": { width: "15%" },
+                    "100%": { left: "100%" },
+                },
+                spin: {
+                    to: { transform: "rotate(360deg)" },
+                },
                 hide: {
                     "0%": { top: "0" },
                     "100%": { top: "-122px" },
@@ -46,6 +57,8 @@ const config: Config = {
                 },
             },
             animation: {
+                loading: "loading 1s ease-in-out infinite",
+                spin: "spin 1s linear infinite",
                 hide: "hide .3s ease-in-out forwards",
                 show: "show .3s ease-in-out forwards",
                 hideNavItems: "hideNavItems .3s ease-in-out forwards",

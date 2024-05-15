@@ -1,9 +1,9 @@
+import CustomLink from "@/app/components/UI/CustomLink";
 import Wrapper from "@/app/components/layout/Wrapper";
 
 import profileMobile from "@/public/assets/images/homepage/mobile/image-homepage-profile.jpg";
 import profileTablet from "@/public/assets/images/homepage/tablet/image-homepage-profile.jpg";
 import profileDesktop from "@/public/assets/images/homepage/desktop/image-homepage-profile.jpg";
-import CustomLink from "@/app/components/UI/CustomLink";
 
 const About = () => {
     return (
@@ -12,7 +12,7 @@ const About = () => {
                 <img
                     src={profileMobile.src}
                     alt=""
-                    className="mb-8 h-full w-full max-w-96 md:hidden"
+                    className="mb-8 h-full w-full max-w-96 md:hidden "
                 />
                 <img
                     src={profileTablet.src}
