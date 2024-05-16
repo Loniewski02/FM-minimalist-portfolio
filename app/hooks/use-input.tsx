@@ -20,7 +20,7 @@ const useInput = (inpValidity: (value: string) => boolean) => {
     const inputBlurHandler = () => {
         setIsTouched(true);
         if (enteredValue === "") {
-            setErrorMsg("Can't be blank");
+            setErrorMsg("This field is required");
         } else if (!inpValidity(enteredValue)) {
             setErrorMsg("Please check again");
         }

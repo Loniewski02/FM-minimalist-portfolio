@@ -16,7 +16,7 @@ const ContactForm = () => {
         isValid: nameIsValid,
         errorMsg: nameError,
         reset: nameReset,
-    } = useInput((value) => value.trim().length > 2);
+    } = useInput((value) => value.trim().length > 1);
 
     const {
         enteredValue: enteredEmail,
