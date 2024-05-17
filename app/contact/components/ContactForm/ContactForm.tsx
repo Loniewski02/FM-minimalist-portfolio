@@ -3,6 +3,7 @@ import useInput from "@/app/hooks/use-input";
 
 import Wrapper from "@/app/components/layout/Wrapper";
 import FormBox from "./FormBox";
+import { sendEmail } from "@/emailjs";
 
 const reg =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -48,6 +49,7 @@ const ContactForm = () => {
             return;
         }
 
+        sendEmail(enteredName, enteredEmail, enteredMsg);
         nameReset();
         emailReset();
         msgReset();
