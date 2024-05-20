@@ -23,7 +23,7 @@ const Header = () => {
                 />
                 <div className="flex flex-col gap-8 md:absolute md:bottom-0 md:left-0 md:bg-VeryLightGrey md:pr-14 md:pt-14">
                     <h1 className="text-40 -tracking-[.4px] text-GraylishDarkBlue md:max-w-[458px] lg:max-w-[390px] lg:text-50">
-                        Hey, I’m Alex Spencer and I love building beautiful
+                        Hey, I’m Miłosz Łoniewski and I love building beautiful
                         websites
                     </h1>
                     <button
