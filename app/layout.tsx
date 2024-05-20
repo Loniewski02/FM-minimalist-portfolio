@@ -20,8 +20,9 @@ const fontSans = Public_Sans({
 });
 
 export const metadata: Metadata = {
-    title: "My App",
-    description: "My App",
+    title: "Miłosz Łoniewski",
+    description:
+        "Hey, I'm Milosz, a web enthusiast and computer science student. I design interesting websites with a focus on user experience. Feel free to contact me.",
 };
 
 export default function RootLayout({
