@@ -55,6 +55,11 @@
 }
 
 @layer utilities {
+    .magic {
+        @apply bg-[#fafafab4];
+        backdrop-filter: blur(20px);
+    }
+
     .sectionX {
         @apply px-8 md:px-10;
     }

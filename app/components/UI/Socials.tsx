@@ -7,7 +7,7 @@ type Props = {
 };
 
 const Socials: React.FC<Props> = ({ isDark }) => {
-    const linkClasses = `${isDark ? "text-GraylishDarkBlue" : "text-White"} hover:text-Cyan transition hover:-translate-y-[2px]`;
+    const linkClasses = `${isDark ? "text-GraylishDarkBlue" : "text-White"} active:scale-95 hover:text-Cyan transition hover:-translate-y-[2px]`;
     const icoClasses = `transition`;
 
     return (

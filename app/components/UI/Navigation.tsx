@@ -45,7 +45,7 @@ const Navigation = () => {
 
     return (
         <nav
-            className={`${isNavShown ? "animate-show" : "animate-hide"} ${lastScrollY > 100 && "animate-reduce shadow-sm"} sectionX sticky left-0 right-0 top-0 z-20 bg-VeryLightGrey py-8 md:py-10`}
+            className={`${isNavShown ? "animate-show" : "animate-hide"} ${lastScrollY > 100 && "animate-reduce shadow-sm"} sectionX magic sticky left-0 right-0 top-0 z-20 py-8 md:py-10`}
         >
             <Wrapper className="flex flex-row items-center justify-between">
                 <Link

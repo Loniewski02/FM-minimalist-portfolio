@@ -1,3 +1,5 @@
+import { motion, AnimatePresence } from "framer-motion";
+
 type Props = {
     id: string;
     type?: string;
@@ -27,7 +29,6 @@ const FormBox: React.FC<Props> = ({
     isError,
     errorMsg,
 }) => {
-    
     return (
         <div className="flex flex-col gap-2">
             <label
@@ -44,20 +45,29 @@ const FormBox: React.FC<Props> = ({
                     onChange={onInputChange}
                     onBlur={onInputBlur}
                     value={enteredValue}
-                    className={`${isError && "border border-Red text-Red"} border bg-LightGrey px-4 py-2 text-13 text-GraylishDarkBlue`}
+                    className={`${isError && "border border-Red text-Red"} border bg-LightGrey px-4 py-2 text-13 text-GraylishDarkBlue transition`}
                 />
             ) : (
                 <textarea
-                    className={`${isError && "border border-Red text-Red"} min-h-24 border bg-LightGrey px-4 py-2 text-13 text-GraylishDarkBlue`}
+                    className={`${isError && "border border-Red text-Red"} min-h-24 border bg-LightGrey px-4 py-2 text-13 text-GraylishDarkBlue transition`}
                     placeholder="How can I help?"
                     onChange={onInputChange}
                     onBlur={onInputBlur}
                     value={enteredValue}
                 />
             )}
-            {isError && (
-                <p className="text-[12px] italic text-Red">{errorMsg}</p>
-            )}
+            <AnimatePresence>
+                {isError && (
+                    <motion.p
+                        initial={{ opacity: 0, x: -50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, z: -50 }}
+                        className="text-[12px] italic text-Red"
+                    >
+                        {errorMsg}
+                    </motion.p>
+                )}
+            </AnimatePresence>
         </div>
     );
 };

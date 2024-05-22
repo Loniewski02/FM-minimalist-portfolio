@@ -1,4 +1,5 @@
 "use client";
+import { motion } from "framer-motion";
 import useInput from "@/app/hooks/use-input";
 
 import Wrapper from "@/app/components/layout/Wrapper";
@@ -58,12 +59,15 @@ const ContactForm = () => {
     };
 
     return (
-        <section className="sectionX  sectionLastB pt-4 lg:pt-6">
+        <motion.section layout className="sectionX  sectionLastB pt-4 lg:pt-6">
             <Wrapper className="lg:flex lg:justify-between">
                 <h2 className="mb-8 text-40 text-GraylishDarkBlue">
                     Contact Me
                 </h2>
-                <form className="flex w-full max-w-[635px] flex-col gap-6">
+                <motion.form
+                    layout
+                    className="flex w-full max-w-[635px] flex-col gap-6"
+                >
                     <FormBox
                         id="name"
                         type="text"
@@ -104,9 +108,9 @@ const ContactForm = () => {
                     >
                         send Message
                     </button>
-                </form>
+                </motion.form>
             </Wrapper>
-        </section>
+        </motion.section>
     );
 };
 
