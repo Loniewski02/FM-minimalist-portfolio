@@ -2,8 +2,6 @@ import Socials from "@/app/components/UI/Socials";
 import Wrapper from "@/app/components/layout/Wrapper";
 
 const ContactInfo = () => {
-
-
     return (
         <section className="sectionX pb-4 pt-2 lg:pb-6">
             <Wrapper className="lines flex flex-col justify-center gap-6 lg:flex-row lg:justify-between">
@@ -15,7 +13,7 @@ const ContactInfo = () => {
                         I’d love to hear about what you’re working on and how I
                         could help. I’m currently looking for a new role and am
                         open to a wide range of opportunities. My preference
-                        would be to find a position in a company in London. But
+                        would be to find a position in a company in Warsaw. But
                         I’m also happy to hear about opportunites that don’t fit
                         that description. I’m a hard-working and positive person
                         who will always approach each task with a sense of

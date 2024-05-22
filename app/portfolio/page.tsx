@@ -1,16 +1,32 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { fetchData } from "../store/portfolio-actions";
 import { useAppSelector, useAppDispatch } from "../hooks/hooks";
 
 import ProjectSection from "./components/ProjectSection";
 import ContactSection from "../components/layout/ContactSection";
+import BackBtn from "../components/UI/BackBtn";
 
 const Portfolio = () => {
+    const [isBackBtnShown, setIsBackBtnShown] = useState<boolean>(false);
     const dispatch = useAppDispatch();
 
     useEffect(() => {
         dispatch(fetchData());
+    }, []);
+
+    useEffect(() => {
+        const checkOffset = () => {
+            window.scrollY > 500
+                ? setIsBackBtnShown(true)
+                : setIsBackBtnShown(false);
+        };
+
+        window.addEventListener("scroll", checkOffset);
+
+        return () => {
+            window.removeEventListener("scroll", checkOffset);
+        };
     }, []);
 
     const projects = useAppSelector((state) => state.portfolio.projects);
@@ -28,6 +44,7 @@ const Portfolio = () => {
                 ))}
             </section>
             <ContactSection />
+            {isBackBtnShown && <BackBtn />}
         </main>
     );
 };
