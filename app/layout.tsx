@@ -35,9 +35,11 @@ export default function RootLayout({
             <body
                 className={`${fontIbarra.variable} ${fontSans.variable} min-h-[100dvh] font-publicSans`}
             >
-                <Navigation />
-                {children}
-                <Footer />
+                <main className="overflow-x-hidden">
+                    <Navigation />
+                    {children}
+                    <Footer />
+                </main>
             </body>
         </html>
     );

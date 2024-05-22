@@ -3,10 +3,10 @@ import ContactInfo from "./components/ContactInfo";
 
 const Contact = () => {
     return (
-        <main>
+        <>
             <ContactInfo />
             <ContactForm />
-        </main>
+        </>
     );
 };
 

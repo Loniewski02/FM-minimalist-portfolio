@@ -26,7 +26,7 @@ const PortfolioItem = () => {
     );
 
     return (
-        <main className="min-h-[100dvh]">
+        <>
             {isLoading && <LoadingSpinner />}
             {error && (
                 <Wrapper className="sectionX flex h-[150px] items-center">
@@ -67,7 +67,7 @@ const PortfolioItem = () => {
                     <ContactSection />
                 </>
             )}
-        </main>
+        </>
     );
 };
 

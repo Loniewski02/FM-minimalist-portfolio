@@ -32,7 +32,7 @@ const Portfolio = () => {
     const projects = useAppSelector((state) => state.portfolio.projects);
 
     return (
-        <main className="min-h-[100dvh]">
+        <>
             <section className="sectionY flex flex-col gap-[72px]">
                 {projects.map((item, index) => (
                     <ProjectSection
@@ -45,7 +45,7 @@ const Portfolio = () => {
             </section>
             <ContactSection />
             {isBackBtnShown && <BackBtn />}
-        </main>
+        </>
     );
 };
 
