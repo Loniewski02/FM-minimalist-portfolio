@@ -90,6 +90,6 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [Portfolio](https://miloszloniewski-portfolio.vercel.app/home)
+- Frontend Mentor - [@Loniewski02](https://www.frontendmentor.io/profile/Loniewski02)
+- Twitter - [@Loniewski02](https://x.com/Loniewski02)
