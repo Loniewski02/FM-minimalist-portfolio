@@ -2,7 +2,6 @@ import { fetchAllProjects } from "@/utils/request";
 
 import ContactSection from "@/components/layout/ContactSection";
 import ProjectItem from "@/components/portfolio/ProjectItem";
-import PortfolioDetailControls from "@/components/portfolio-detail/PortfolioDetailControls";
 
 const Portfolio = async () => {
     const projects: Project[] | [] = await fetchAllProjects();
