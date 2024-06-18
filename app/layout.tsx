@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Public_Sans, Ibarra_Real_Nova } from "next/font/google";
 import "./globals.css";
-import Navigation from "./components/UI/Navigation";
-import Footer from "./components/layout/Footer";
+import Navigation from "../components/UI/navigation/Navigation";
+import Footer from "../components/layout/Footer";
 
 const fontIbarra = Ibarra_Real_Nova({
     subsets: ["latin"],
@@ -33,13 +33,13 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${fontIbarra.variable} ${fontSans.variable} min-h-[100dvh] font-publicSans`}
+                className={`${fontIbarra.variable} ${fontSans.variable} flex min-h-[100dvh] flex-col font-publicSans`}
             >
-                <main className="overflow-x-hidden">
+                <main className="grow overflow-x-clip">
                     <Navigation />
                     {children}
-                    <Footer />
                 </main>
+                <Footer />
             </body>
         </html>
     );

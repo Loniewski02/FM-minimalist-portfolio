@@ -23,3 +23,17 @@ type DetailData = {
     mobilePreview: string;
     desktopPreview: string;
 };
+
+type Project = {
+    _id: string;
+    title: string;
+    desc: string;
+    codeUrl: string;
+    liveUrl: string;
+    tech: string[];
+    hash: string[];
+    desktopFull: string;
+    mobileFull: string;
+    mobilePreview: string;
+    desktopPreview: string;
+};

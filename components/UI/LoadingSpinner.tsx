@@ -2,10 +2,10 @@ import { MoonLoader } from "react-spinners";
 
 const override = {
     display: "block",
-    margin: "100px auto",
+    margin: "0px auto",
 };
 
-const Loading = ({ loading }: { loading: boolean }) => {
+const LoadingSpinner = ({ loading }: { loading: boolean }) => {
     return (
         <MoonLoader
             color="#5FB4A2"
@@ -17,4 +17,4 @@ const Loading = ({ loading }: { loading: boolean }) => {
     );
 };
 
-export default Loading;
+export default LoadingSpinner;

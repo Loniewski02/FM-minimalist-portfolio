@@ -1,12 +1,12 @@
-import About from "./components/About";
-import Header from "./components/Header";
-import ContactSection from "../components/layout/ContactSection";
+import HomeAboutSection from "@/components/home/HomeAboutSection";
+import HomeHeader from "@/components/home/HomeHeader";
+import ContactSection from "@/components/layout/ContactSection";
 
 export default function Home() {
     return (
         <>
-            <Header />
-            <About />
+            <HomeHeader />
+            <HomeAboutSection />
             <ContactSection />
         </>
     );
