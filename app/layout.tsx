@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Public_Sans, Ibarra_Real_Nova } from "next/font/google";
 import "./globals.css";
+
 import Navigation from "../components/UI/navigation/Navigation";
 import Footer from "../components/layout/Footer";
 
@@ -31,7 +32,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <html className="hidden" lang="en">
             <body
                 className={`${fontIbarra.variable} ${fontSans.variable} flex min-h-[100dvh] flex-col font-publicSans`}
             >

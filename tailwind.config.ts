@@ -36,33 +36,9 @@ const config: Config = {
                     "90%": { width: "15%" },
                     "100%": { left: "100%" },
                 },
-                spin: {
-                    to: { transform: "rotate(360deg)" },
-                },
-                hide: {
-                    "0%": { top: "0" },
-                    "100%": { top: "-122px" },
-                },
-                show: {
-                    "0%": { top: "-122px" },
-                    "100%": { top: "0" },
-                },
-                hideNavItems: {
-                    "0%": { top: "90px", right: "32px" },
-                    "100%": { top: "-100%", right: "-120%" },
-                },
-                showNavItems: {
-                    "0%": { top: "-100%", right: "-120%" },
-                    "100%": { top: "90px", right: "32px" },
-                },
             },
             animation: {
                 loading: "loading 1s ease-in-out infinite",
-                spin: "spin 1s linear infinite",
-                hide: "hide .3s ease-in-out forwards",
-                show: "show .3s ease-in-out forwards",
-                hideNavItems: "hideNavItems .3s ease-in-out forwards",
-                showNavItems: "showNavItems .3s ease-in-out forwards",
             },
         },
     },

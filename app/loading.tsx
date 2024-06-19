@@ -1,19 +1,8 @@
-import { MoonLoader } from "react-spinners";
-
-const override = {
-    display: "block",
-    margin: "100px auto",
-};
-
-const Loading = ({ loading }: { loading: boolean }) => {
+const Loading = () => {
     return (
-        <MoonLoader
-            color="#5FB4A2"
-            loading={loading}
-            cssOverride={override}
-            size={100}
-            aria-label="Loading Spinner"
-        />
+        <div className="fixed left-0 right-0 top-0 z-[1000] h-1">
+            <div className="w-25 relative z-50 h-full animate-loading bg-Cyan" />
+        </div>
     );
 };
 

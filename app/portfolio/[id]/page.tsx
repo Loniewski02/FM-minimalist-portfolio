@@ -2,6 +2,8 @@
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
+import { fetchProject } from "@/utils/request";
+
 import Wrapper from "@/components/layout/Wrapper";
 import ContactSection from "@/components/layout/ContactSection";
 import PortfolioDetailHeader from "@/components/portfolio-detail/PortfolioDetailHeader";
@@ -9,9 +11,8 @@ import PortfolioDetailHeading from "@/components/portfolio-detail/PortfolioDetai
 import PortfolioDetailBackground from "@/components/portfolio-detail/PortfolioDetailBackground";
 import PortfolioDetailPreviews from "@/components/portfolio-detail/PortfolioDetailPreviews";
 import PortfolioDetailControls from "@/components/portfolio-detail/PortfolioDetailControls";
-
-import { fetchProject } from "@/utils/request";
 import LoadingSpinner from "@/components/UI/LoadingSpinner";
+
 
 const PortfolioItem = () => {
     const { id }: { id: string } = useParams();

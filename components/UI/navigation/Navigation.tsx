@@ -14,9 +14,11 @@ const Navigation = () => {
     const [isNavItemsShown, setIsNavItemsShown] = useState(false);
     const [isNavShown, setIsNavShown] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
-    const [isInitial, setIsInitial] = useState(true);
 
     const pathname = usePathname();
+    useEffect(() => {
+        document.documentElement.classList.remove("hidden");
+    }, []);
 
     useEffect(() => {
         const navbarBehavior = () => {
@@ -39,7 +41,6 @@ const Navigation = () => {
     }, [lastScrollY]);
 
     const showMobileMenuHandler = () => {
-        setIsInitial(false);
         setIsNavItemsShown((prevState) => !prevState);
     };
 
@@ -49,7 +50,7 @@ const Navigation = () => {
 
     return (
         <nav
-            className={`${isNavShown ? "animate-show" : "animate-hide"} ${lastScrollY > 200 && "magic shadow-sm"} sectionX sticky left-0 right-0 top-0 z-20 bg-VeryLightGrey py-8 md:py-10`}
+            className={`${isNavShown ? "translate-y-[0]" : "-translate-y-[122px]"} ${lastScrollY > 200 && "magic shadow-sm"} sectionX sticky left-0 right-0 top-0 z-20 bg-VeryLightGrey py-8 transition duration-300 md:py-10`}
         >
             <Wrapper className="flex flex-row items-center justify-between">
                 <Link
@@ -64,9 +65,9 @@ const Navigation = () => {
                     onClick={showMobileMenuHandler}
                 />
                 <div
-                    className={`${isNavItemsShown && "animate-showNavItems"} ${!isInitial && !isNavItemsShown && "animate-hideNavItems"} fixed -right-[120%] -top-[120%] bg-GraylishDarkBlue px-16 py-10 md:static md:block md:bg-transparent md:p-0`}
+                    className={`${isNavItemsShown ? "-translate-x-[32px] translate-y-[96px]" : "-translate-y-[120%] translate-x-[120%]"} fixed right-0 top-0 bg-GraylishDarkBlue px-16 py-10 transition duration-300 md:static md:block md:translate-x-0 md:translate-y-0 md:bg-transparent md:p-0`}
                 >
-                    <div className="flex flex-col items-center gap-6 md:flex-row ">
+                    <div className="flex flex-col items-center gap-6 md:flex-row">
                         {ROUTES.map((route) => (
                             <Link
                                 key={route.id}

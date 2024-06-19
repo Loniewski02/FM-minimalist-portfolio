@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const PortfolioDetailPreviews = ({
     mobilePreviewImg,
     desktopPreviewImg,
@@ -15,15 +17,19 @@ const PortfolioDetailPreviews = ({
                 Static Previews
             </h2>
             <div className="flex flex-col gap-8">
-                <img
+                <Image
+                    width={635}
+                    height={430}
                     src={desktopPreviewImg}
                     alt=""
-                    className="max-h-[430px] cursor-pointer object-cover transition active:scale-95 lg:max-h-[400px] lg:max-w-[635px]"
+                    className="max-h-[430px] w-auto cursor-pointer object-cover transition active:scale-95 lg:max-h-[400px] lg:max-w-[635px]"
                 />
-                <img
+                <Image
+                    width={635}
+                    height={430}
                     src={mobilePreviewImg}
                     alt=""
-                    className="max-h-[430px] cursor-pointer object-cover transition active:scale-95 lg:max-h-[400px] lg:max-w-[635px]"
+                    className="max-h-[430px] w-auto cursor-pointer object-cover transition active:scale-95 lg:max-h-[400px] lg:max-w-[635px]"
                 />
             </div>
         </article>

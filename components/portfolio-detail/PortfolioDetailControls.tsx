@@ -75,7 +75,7 @@ const PortfolioDetailControls = () => {
                         onClick={() => indexHandler(nextIndex)}
                         className={`${nextIndex === projects.length - 1 && index === projects.length - 1 && "cursor-default opacity-0"} flex w-1/2 flex-col items-end gap-4 px-2 py-6 text-right text-GraylishDarkBlue transition hover:bg-GraylishDarkBlue hover:text-White md:flex-row md:items-center md:justify-end md:gap-8`}
                     >
-                        <ArrowRight className="order-2" />
+                        <ArrowRight className="md:order-2" />
                         <span>
                             <h3 className="mb-1 text-32 font-normal">
                                 {nextProject.title}

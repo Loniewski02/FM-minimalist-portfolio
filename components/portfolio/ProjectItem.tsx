@@ -30,7 +30,8 @@ const ProjectItem = ({
                         height={405}
                         src={item.desktopPreview}
                         alt=""
-                        className="mb-8 block w-full max-w-[311px] rounded-sm md:mb-0 md:max-w-[339px] lg:max-w-[540px]"
+                        priority
+                        className="mb-8 block w-auto max-w-[311px] rounded-sm md:mb-0 md:max-w-[339px] lg:max-w-[540px]"
                     />
                 </motion.div>
                 <div
