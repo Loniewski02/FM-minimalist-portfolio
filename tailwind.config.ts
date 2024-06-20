@@ -16,6 +16,8 @@ const config: Config = {
                 LightGrey: "#EAEAEB",
                 Red: "#F43030",
                 White: "#FFFFFF",
+                DarkBg: "#292831",
+                DarkText: "#e2dfdf",
             },
             fontFamily: {
                 ibarra: ["var(--font-ibarra)"],
@@ -43,5 +45,6 @@ const config: Config = {
         },
     },
     plugins: [],
+    darkMode: "class",
 };
 export default config;

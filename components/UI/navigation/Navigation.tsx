@@ -9,6 +9,7 @@ import Wrapper from "../../layout/Wrapper";
 import BurgerBtn from "./BurgerBtn";
 
 import Logo from "@/public/assets/images/logo.svg";
+import ThemeSwitchBtn from "../ThemeSwitchBtn";
 
 const Navigation = () => {
     const [isNavItemsShown, setIsNavItemsShown] = useState(false);
@@ -50,22 +51,25 @@ const Navigation = () => {
 
     return (
         <nav
-            className={`${isNavShown ? "translate-y-[0]" : "-translate-y-[122px]"} ${lastScrollY > 200 && "magic shadow-sm"} sectionX sticky left-0 right-0 top-0 z-20 bg-VeryLightGrey py-8 transition duration-300 md:py-10`}
+            className={`${isNavShown ? "translate-y-[0]" : "-translate-y-[122px]"} ${lastScrollY > 200 && "shadow-sm"} magic sectionX sticky left-0 right-0 top-0 z-20 py-8 transition duration-300 md:px-10`}
         >
             <Wrapper className="flex flex-row items-center justify-between">
                 <Link
                     href="/"
                     aria-label="Home Page"
-                    className="text-GraylishDarkBlue"
+                    className="text-GraylishDarkBlue dark:text-White"
                 >
                     <Logo />
                 </Link>
-                <BurgerBtn
-                    isShown={isNavItemsShown}
-                    onClick={showMobileMenuHandler}
-                />
+                <div className="flex items-center gap-4 md:hidden">
+                    <ThemeSwitchBtn className="block md:hidden" />
+                    <BurgerBtn
+                        isShown={isNavItemsShown}
+                        onClick={showMobileMenuHandler}
+                    />
+                </div>
                 <div
-                    className={`${isNavItemsShown ? "-translate-x-[32px] translate-y-[96px]" : "-translate-y-[120%] translate-x-[120%]"} fixed right-0 top-0 bg-GraylishDarkBlue px-16 py-10 transition duration-300 md:static md:block md:translate-x-0 md:translate-y-0 md:bg-transparent md:p-0`}
+                    className={`${isNavItemsShown ? "-translate-x-[32px] translate-y-[96px]" : "-translate-y-[120%] translate-x-[120%]"} fixed right-0 top-0 bg-GraylishDarkBlue px-16 py-10 transition duration-300 md:static md:block md:translate-x-0 md:translate-y-0 md:bg-transparent md:p-0 dark:bg-LightGrey md:dark:bg-transparent`}
                 >
                     <div className="flex flex-col items-center gap-6 md:flex-row">
                         {ROUTES.map((route) => (
@@ -74,11 +78,12 @@ const Navigation = () => {
                                 href={route.url}
                                 aria-label={`${route.name} Page`}
                                 onClick={hideMobileMenuHandler}
-                                className={`${pathname.includes(route.url) && "active"} link text-xs uppercase tracking-wider text-White md:text-GraylishDarkBlue`}
+                                className={`${pathname.includes(route.url) && "active"} link dark:md:text-DarkText text-xs uppercase tracking-wider text-White md:text-GraylishDarkBlue dark:text-GraylishDarkBlue`}
                             >
                                 {route.name}
                             </Link>
                         ))}
+                        <ThemeSwitchBtn className="ml-4 hidden md:block" />
                     </div>
                 </div>
             </Wrapper>

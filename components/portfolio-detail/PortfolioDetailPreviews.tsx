@@ -13,7 +13,7 @@ const PortfolioDetailPreviews = ({
 }) => {
     return (
         <article className="mb-12 pt-6">
-            <h2 className="mb-7 text-32 font-normal tracking-[-.3px] text-GraylishDarkBlue">
+            <h2 className="mb-7 text-32 font-normal tracking-[-.3px] text-GraylishDarkBlue dark:text-White">
                 Static Previews
             </h2>
             <div className="flex flex-col gap-8">

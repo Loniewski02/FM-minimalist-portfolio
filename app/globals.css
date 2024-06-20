@@ -9,7 +9,7 @@
     }
 
     body {
-        @apply bg-VeryLightGrey;
+        @apply dark:bg-DarkBg bg-VeryLightGrey;
     }
 
     h1,
@@ -33,7 +33,7 @@
         transform-origin: right;
         transition: transform 0.3s;
 
-        @apply absolute bottom-0 left-0 h-[2px]  w-full bg-Cyan;
+        @apply absolute bottom-0 left-0 h-[2px] w-full bg-Cyan;
     }
 
     .link:hover::after {
@@ -56,7 +56,7 @@
 
 @layer utilities {
     .magic {
-        @apply bg-[#fafafab4];
+        @apply bg-[#fafafab4] dark:bg-[#33323d63];
         backdrop-filter: blur(20px);
     }
 

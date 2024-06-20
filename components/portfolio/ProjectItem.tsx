@@ -17,13 +17,13 @@ const ProjectItem = ({
     return (
         <article className="sectionX">
             <Wrapper
-                className={`flex flex-col items-center md:flex-row md:justify-center md:gap-14 lg:justify-start xl:gap-28 ${reversed && "lg:justify-end"}`}
+                className={`flex h-full flex-col items-center md:max-h-[250px] md:flex-row md:justify-center md:gap-14 lg:max-h-[none] lg:justify-start xl:gap-28 ${reversed && "lg:justify-end"}`}
             >
                 <motion.div
                     initial={{ opacity: 0, x: reversed ? 50 : -50, y: 150 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     viewport={{ once: true }}
-                    className={`${reversed && "md:order-2"}`}
+                    className={`${reversed && "md:order-2"} relative mb-8 grid place-items-center bg-LightGrey md:mb-0 md:self-stretch`}
                 >
                     <Image
                         width={540}
@@ -31,11 +31,12 @@ const ProjectItem = ({
                         src={item.desktopPreview}
                         alt=""
                         priority
-                        className="mb-8 block w-auto max-w-[311px] rounded-sm md:mb-0 md:max-w-[339px] lg:max-w-[540px]"
+                        className="block w-full max-w-96 rounded-sm md:max-w-[339px] lg:max-w-[540px]"
                     />
+                    <div className="absolute bottom-0 left-0 right-0 top-0 hidden bg-[rgba(0,0,0,0.2)] dark:block" />
                 </motion.div>
                 <div
-                    className={`lines max-w-96 md:max-w-md lg:max-w-[350px] lg:self-stretch  ${reversed && "md:order-1"}`}
+                    className={`lines w-full max-w-96 md:w-auto md:max-w-md md:self-stretch lg:w-full lg:max-w-[370px]  ${reversed && "md:order-1"}`}
                 >
                     <motion.div
                         initial={{ opacity: 0, scale: 0 }}
@@ -43,10 +44,10 @@ const ProjectItem = ({
                         viewport={{ once: true }}
                         className="flex h-full flex-col justify-center gap-6"
                     >
-                        <h2 className="mb-2 text-40 text-GraylishDarkBlue">
+                        <h3 className="mb-2 text-40 text-GraylishDarkBlue dark:text-White">
                             {item.title}
-                        </h2>
-                        <p className="text-justify text-15 leading-7 text-GraylishDarkBlue">
+                        </h3>
+                        <p className="dark:text-DarkText text-justify text-15 leading-7 text-GraylishDarkBlue">
                             {item.desc}
                         </p>
                         <CustomLink

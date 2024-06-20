@@ -61,7 +61,7 @@ const ContactForm = () => {
     return (
         <motion.section layout className="sectionX  sectionLastB pt-4 lg:pt-6">
             <Wrapper className="lg:flex lg:justify-between">
-                <h2 className="mb-8 text-40 text-GraylishDarkBlue">
+                <h2 className="mb-8 text-40 text-GraylishDarkBlue dark:text-White">
                     Contact Me
                 </h2>
                 <motion.form

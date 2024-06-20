@@ -3,13 +3,13 @@ import Wrapper from "../layout/Wrapper";
 
 const ContactInfo = () => {
     return (
-        <section className="sectionX pb-4 pt-2 lg:pb-6">
+        <section className="sectionX pb-4 pt-12 lg:pb-6">
             <Wrapper className="lines flex flex-col justify-center gap-6 lg:flex-row lg:justify-between">
-                <h2 className="mb-2 text-40 text-GraylishDarkBlue">
+                <h2 className="mb-2 text-40 text-GraylishDarkBlue dark:text-White">
                     Get in Touch
                 </h2>
                 <div>
-                    <p className="mb-6 max-w-[635px] text-justify text-base leading-7">
+                    <p className="dark:text-DarkText mb-6 max-w-[635px] text-justify text-base leading-7 text-GraylishDarkBlue">
                         I’d love to hear about what you’re working on and how I
                         could help. I’m currently looking for a new role and am
                         open to a wide range of opportunities. My preference

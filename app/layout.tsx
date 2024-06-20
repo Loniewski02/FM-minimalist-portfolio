@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Navigation from "../components/UI/navigation/Navigation";
 import Footer from "../components/layout/Footer";
+import ThemeProviders from "./theme-provider";
 
 const fontIbarra = Ibarra_Real_Nova({
     subsets: ["latin"],
@@ -32,15 +33,17 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html className="hidden" lang="en">
+        <html className="hidden" lang="en" suppressHydrationWarning>
             <body
                 className={`${fontIbarra.variable} ${fontSans.variable} flex min-h-[100dvh] flex-col font-publicSans`}
             >
-                <main className="grow overflow-x-clip">
-                    <Navigation />
-                    {children}
-                </main>
-                <Footer />
+                <ThemeProviders>
+                    <main className="grow overflow-x-clip">
+                        <Navigation />
+                        {children}
+                    </main>
+                    <Footer />
+                </ThemeProviders>
             </body>
         </html>
     );

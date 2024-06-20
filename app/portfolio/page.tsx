@@ -9,6 +9,7 @@ const Portfolio = async () => {
     return (
         <>
             <section className="sectionY flex flex-col gap-[72px]">
+                <h2 className="sr-only">Checkout my work</h2>
                 {projects.map((item, index) => (
                     <ProjectItem
                         key={item._id}

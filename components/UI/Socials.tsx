@@ -3,7 +3,7 @@ import Twitter from "@/public/assets/images/icons/twitter.svg";
 import Linkedin from "@/public/assets/images/icons/linkedin.svg";
 
 const Socials = ({ isDark }: { isDark: boolean }) => {
-    const linkClasses = `${isDark ? "text-GraylishDarkBlue" : "text-White"} active:scale-95 hover:text-Cyan transition hover:-translate-y-[2px]`;
+    const linkClasses = `${isDark ? "text-GraylishDarkBlue dark:text-DarkText " : "text-White"} hover:text-Cyan dark:hover:text-Cyan active:scale-95 transition hover:-translate-y-[2px]`;
     const icoClasses = `transition`;
 
     return (

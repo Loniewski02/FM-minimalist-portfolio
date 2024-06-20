@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 
-const barClasses = "block w-full h-[1px] bg-GraylishDarkBlue absolute left-0";
+const barClasses =
+    "block w-full h-[1px] bg-GraylishDarkBlue dark:bg-White absolute left-0";
 
 const BurgerBtn = ({
     onClick,

@@ -34,10 +34,10 @@ const HomeAboutSection = () => {
                     priority
                 />
                 <div className="lines flex max-w-96 flex-col justify-center gap-6 md:max-w-md lg:max-w-[350px]">
-                    <h2 className="mb-2 text-40 text-GraylishDarkBlue">
+                    <h2 className="mb-2 text-40 text-GraylishDarkBlue dark:text-White">
                         About Me
                     </h2>
-                    <p className="text-justify text-base leading-7 text-GraylishDarkBlue">
+                    <p className="dark:text-DarkText text-justify text-base leading-7 text-GraylishDarkBlue">
                         I’m a junior front-end developer looking for a new role
                         in an exciting company. I focus on writing accessible
                         HTML, using modern CSS practices and writing clean

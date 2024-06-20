@@ -13,7 +13,6 @@ import PortfolioDetailPreviews from "@/components/portfolio-detail/PortfolioDeta
 import PortfolioDetailControls from "@/components/portfolio-detail/PortfolioDetailControls";
 import LoadingSpinner from "@/components/UI/LoadingSpinner";
 
-
 const PortfolioItem = () => {
     const { id }: { id: string } = useParams();
     const [project, setProject] = useState<Project | null>(null);
@@ -37,7 +36,11 @@ const PortfolioItem = () => {
     let content;
 
     if (loading) {
-        content = <LoadingSpinner loading={loading} />;
+        content = (
+            <div className="mt-[100px]">
+                <LoadingSpinner loading={loading} />
+            </div>
+        );
     }
     if (!loading && !project) {
         content = <p>Error</p>;

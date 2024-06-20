@@ -22,7 +22,7 @@ const CustomLink = ({
             onClick={onClick}
             href={href}
             aria-label={ariaLabel}
-            className={`block w-max border border-GraylishDarkBlue px-8 py-4 text-center text-xs uppercase tracking-[2px] transition  active:scale-95 ${className} ${isDark ? "bg-GraylishDarkBlue text-White hover:bg-White hover:text-GraylishDarkBlue" : " text-GraylishDarkBlue hover:bg-GraylishDarkBlue hover:text-White"}`}
+            className={`block w-max border border-GraylishDarkBlue px-8 py-4 text-center text-xs uppercase tracking-[2px] transition active:scale-95  dark:border-LightGrey ${className} ${isDark ? "dark:hover:bg-Test dark:hover:text-DarkText bg-GraylishDarkBlue text-White hover:bg-White hover:text-GraylishDarkBlue dark:bg-LightGrey dark:text-GraylishDarkBlue" : "dark:text-DarkText text-GraylishDarkBlue hover:bg-GraylishDarkBlue hover:text-White dark:hover:bg-LightGrey dark:hover:text-GraylishDarkBlue"}`}
         >
             {children}
         </Link>
@@ -36,7 +36,7 @@ const CustomLink = ({
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={ariaLabel}
-                className={`block w-max border border-GraylishDarkBlue px-8 py-4 text-center text-xs uppercase tracking-[2px] transition  active:scale-95 ${className} ${isDark ? "bg-GraylishDarkBlue text-White hover:bg-White hover:text-GraylishDarkBlue" : " text-GraylishDarkBlue hover:bg-GraylishDarkBlue hover:text-White"}`}
+                className={`block w-max border border-GraylishDarkBlue px-8 py-4 text-center text-xs uppercase tracking-[2px] transition  active:scale-95 ${className} ${isDark ? "dark:hover:bg-Test dark:hover:text-DarkText bg-GraylishDarkBlue text-White hover:bg-White hover:text-GraylishDarkBlue dark:bg-LightGrey dark:text-GraylishDarkBlue" : "dark:text-DarkText text-GraylishDarkBlue hover:bg-GraylishDarkBlue hover:text-White dark:hover:bg-LightGrey dark:hover:text-GraylishDarkBlue"}`}
             >
                 {children}
             </a>

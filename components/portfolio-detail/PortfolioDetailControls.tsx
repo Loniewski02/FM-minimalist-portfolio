@@ -57,7 +57,7 @@ const PortfolioDetailControls = () => {
                     <Link
                         href={`/portfolio/${prevPath}`}
                         onClick={() => indexHandler(prevIndex)}
-                        className={`${prevIndex === 0 && index === 0 && "cursor-default opacity-0"} flex w-1/2 flex-col items-start gap-4 px-2 py-6 text-left text-GraylishDarkBlue transition hover:bg-GraylishDarkBlue hover:text-White md:flex-row md:items-center md:justify-start md:gap-8`}
+                        className={`${prevIndex === 0 && index === 0 && "cursor-default opacity-0"} dark:text-DarkText flex w-1/2 flex-col items-start gap-4 px-2 py-6 text-left text-GraylishDarkBlue transition hover:bg-GraylishDarkBlue hover:text-White md:flex-row md:items-center md:justify-start md:gap-8 dark:hover:bg-LightGrey dark:hover:text-GraylishDarkBlue`}
                     >
                         <ArrowLeft />
                         <span>
@@ -73,7 +73,7 @@ const PortfolioDetailControls = () => {
                     <Link
                         href={`/portfolio/${nextPath}`}
                         onClick={() => indexHandler(nextIndex)}
-                        className={`${nextIndex === projects.length - 1 && index === projects.length - 1 && "cursor-default opacity-0"} flex w-1/2 flex-col items-end gap-4 px-2 py-6 text-right text-GraylishDarkBlue transition hover:bg-GraylishDarkBlue hover:text-White md:flex-row md:items-center md:justify-end md:gap-8`}
+                        className={`${nextIndex === projects.length - 1 && index === projects.length - 1 && "cursor-default opacity-0"} dark:text-DarkText flex w-1/2 flex-col items-end gap-4 px-2 py-6 text-right text-GraylishDarkBlue transition hover:bg-GraylishDarkBlue hover:text-White md:flex-row md:items-center md:justify-end md:gap-8 dark:hover:bg-LightGrey dark:hover:text-GraylishDarkBlue`}
                     >
                         <ArrowRight className="md:order-2" />
                         <span>
