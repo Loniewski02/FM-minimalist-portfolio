@@ -17,9 +17,7 @@ const Navigation = () => {
     const [lastScrollY, setLastScrollY] = useState(0);
 
     const pathname = usePathname();
-    useEffect(() => {
-        document.documentElement.classList.remove("hidden");
-    }, []);
+
 
     useEffect(() => {
         const navbarBehavior = () => {
@@ -69,7 +67,7 @@ const Navigation = () => {
                     />
                 </div>
                 <div
-                    className={`${isNavItemsShown ? "-translate-x-[32px] translate-y-[96px]" : "-translate-y-[120%] translate-x-[120%]"} fixed right-0 top-0 bg-GraylishDarkBlue px-16 py-10 transition duration-300 md:static md:block md:translate-x-0 md:translate-y-0 md:bg-transparent md:p-0 dark:bg-LightGrey md:dark:bg-transparent`}
+                    className={`${isNavItemsShown ? "-translate-x-[32px] translate-y-[96px]" : "-translate-y-[120%] translate-x-[120%]"} fixed right-0 top-0 bg-GraylishDarkBlue px-16 py-10 transition duration-300 dark:bg-LightGrey md:static md:block md:translate-x-0 md:translate-y-0 md:bg-transparent md:p-0 md:dark:bg-transparent`}
                 >
                     <div className="flex flex-col items-center gap-6 md:flex-row">
                         {ROUTES.map((route) => (
@@ -78,7 +76,7 @@ const Navigation = () => {
                                 href={route.url}
                                 aria-label={`${route.name} Page`}
                                 onClick={hideMobileMenuHandler}
-                                className={`${pathname.includes(route.url) && "active"} link dark:md:text-DarkText text-xs uppercase tracking-wider text-White md:text-GraylishDarkBlue dark:text-GraylishDarkBlue`}
+                                className={`${pathname.includes(route.url) && "active"} link text-xs uppercase tracking-wider text-White dark:text-GraylishDarkBlue md:text-GraylishDarkBlue dark:md:text-DarkText`}
                             >
                                 {route.name}
                             </Link>

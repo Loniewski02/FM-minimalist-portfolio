@@ -23,6 +23,7 @@ const ProjectItem = ({
                     initial={{ opacity: 0, x: reversed ? 50 : -50, y: 150 }}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     viewport={{ once: true }}
+                    transition={{ type: "tween" }}
                     className={`${reversed && "md:order-2"} relative mb-8 grid place-items-center bg-LightGrey md:mb-0 md:self-stretch`}
                 >
                     <Image
@@ -42,12 +43,13 @@ const ProjectItem = ({
                         initial={{ opacity: 0, scale: 0 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
+                        transition={{ type: "tween" }}
                         className="flex h-full flex-col justify-center gap-6"
                     >
                         <h3 className="mb-2 text-40 text-GraylishDarkBlue dark:text-White">
                             {item.title}
                         </h3>
-                        <p className="dark:text-DarkText text-justify text-15 leading-7 text-GraylishDarkBlue">
+                        <p className="text-justify text-15 leading-7 text-GraylishDarkBlue dark:text-DarkText">
                             {item.desc}
                         </p>
                         <CustomLink
