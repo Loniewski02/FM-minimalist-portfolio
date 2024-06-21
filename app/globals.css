@@ -9,7 +9,7 @@
     }
 
     body {
-        @apply dark:bg-DarkBg bg-VeryLightGrey;
+        @apply bg-VeryLightGrey dark:bg-DarkBg;
     }
 
     h1,
@@ -56,7 +56,7 @@
 
 @layer utilities {
     .magic {
-        @apply bg-[#fafafab4] dark:bg-[#33323d63];
+        @apply bg-[#fafafab4] dark:bg-[#292831b4];
         backdrop-filter: blur(20px);
     }
 

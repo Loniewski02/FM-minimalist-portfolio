@@ -18,7 +18,6 @@ const Navigation = () => {
 
     const pathname = usePathname();
 
-
     useEffect(() => {
         const navbarBehavior = () => {
             if (window.scrollY > lastScrollY) {
@@ -49,7 +48,7 @@ const Navigation = () => {
 
     return (
         <nav
-            className={`${isNavShown ? "translate-y-[0]" : "-translate-y-[122px]"} ${lastScrollY > 200 && "shadow-sm"} magic sectionX sticky left-0 right-0 top-0 z-20 py-8 transition duration-300 md:px-10`}
+            className={`${isNavShown ? "translate-y-[0]" : "-translate-y-[122px]"} ${lastScrollY > 200 && "shadow-sm"} magic sectionX sticky left-0 right-0 top-0 z-20 py-8 transition-transform duration-300 md:px-10`}
         >
             <Wrapper className="flex flex-row items-center justify-between">
                 <Link

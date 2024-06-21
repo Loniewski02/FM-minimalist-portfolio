@@ -5,6 +5,7 @@ import "./globals.css";
 import Navigation from "../components/UI/navigation/Navigation";
 import Footer from "../components/layout/Footer";
 import ThemeProviders from "./theme-provider";
+import Wrapper from "@/components/layout/Wrapper";
 
 const fontIbarra = Ibarra_Real_Nova({
     subsets: ["latin"],
